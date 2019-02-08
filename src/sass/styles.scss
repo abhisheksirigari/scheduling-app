@@ -1,0 +1,43 @@
+@import 'variables';
+
+// 3rd Party Libraries
+@import '../../node_modules/font-awesome/scss/font-awesome';
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';
+@import '../../node_modules/angular-calendar/scss/angular-calendar.scss';
+
+.footer {
+    height: 50px;
+    background: #828282;
+    padding: 20px;
+    margin-top: 10px;
+}
+.cal-month-view .cal-header {
+    border: 1px solid #c1b8b8;
+    padding: 5px;
+    background: #ddd;
+}
+.cal-month-view .cal-day-cell.cal-today .cal-day-number {
+    font-size: 1em;
+    @include respond-to(handhelds) { font-size: 1em;}
+    @include respond-to(medium-screens) { font-size: 1em; }
+    @include respond-to(wide-screens) { font-size: 2em; }
+}
+.cal-month-view .cal-day-cell {
+  min-height: 100px;
+  background: #f5f1f1;
+}
+.cal-month-view .cal-events {
+    @include respond-to(handhelds) { display: inline-block; }
+    @include respond-to(medium-screens) { display: inline-block; }
+    @include respond-to(wide-screens) { display: block; }
+}
+.card-deck .card {
+    @include respond-to(handhelds) { font-size: 0.8rem; }
+    @include respond-to(medium-screens) { font-size: 1rem; }
+    @include respond-to(wide-screens) { font-size: 1rem; }
+}
+.cal-month-view .cal-event {
+    @include respond-to(handhelds) { width: 20px;height: 20px; }
+    @include respond-to(medium-screens) { width: 20px;height: 20px; }
+    @include respond-to(wide-screens) { width: 20px;height: 20px; }
+}

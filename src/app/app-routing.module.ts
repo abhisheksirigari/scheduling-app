@@ -1,14 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { ScheduleComponent } from 'src/app/components/schedule/schedule.component';
 
 export const routes: Routes = [
-  { path: '', redirectTo: "/schedule", pathMatch: 'full' },
-  { path: 'schedule', component: ScheduleComponent }
+  { path: '', redirectTo: 'tech', pathMatch: 'full'},
+  { path: 'tech', loadChildren: 'app/technician/technician.module#TechnicianModule' }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, { useHash: true, onSameUrlNavigation: 'reload' })],
+  imports: [RouterModule.forRoot(routes, { useHash: true })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

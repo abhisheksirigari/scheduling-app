@@ -1,0 +1,28 @@
+// Font Awesome
+$fa-font-path: '../../node_modules/font-awesome/fonts';
+$text-white : white;
+$card-fontsize : 20px;
+$white :#fff;
+$btn-primary-clr :#00D092;
+$login-box-shadow :rgba(0,0,0,0.2);
+$google-icon-color :#BD3518;
+$twitter-icon-color :#33ccff;
+$facebook-icon-color:#3B5998;
+
+$break-small: 320px;
+$break-medium: 998px;
+$break-large: 1024px;
+
+@mixin respond-to($media) {
+  @if $media == handhelds {
+    @media only screen and (max-width: $break-small) { @content; }
+  }
+  @else if $media == medium-screens {
+    @media only screen and (min-width: $break-small + 1) and (max-width: $break-medium - 1) { @content; }
+  }
+  @else if $media == wide-screens {
+    @media only screen and (min-width: $break-large) { @content; }
+  }
+}
+
+
