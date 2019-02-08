@@ -12,6 +12,9 @@ import { TechHeaderComponent } from './components/tech-header/tech-header.compon
 import { TechSidebarComponent } from './components/tech-sidebar/tech-sidebar.component';
 import { TechScheduleComponent } from './components/tech-schedule/tech-schedule.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { SchedulerService } from './services/scheduler.service';
+import { HttpInterceptorService } from './services/http-interceptor.service';
+import { WebService } from './services/web.service';
 
 @NgModule({
   imports: [
@@ -23,7 +26,12 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     FormsModule,
     NgbModule.forRoot()
   ],
-  declarations: [DashboardComponent, TechHeaderComponent, TechSidebarComponent, TechScheduleComponent]
+  declarations: [DashboardComponent, TechHeaderComponent, TechSidebarComponent, TechScheduleComponent],
+  providers: [
+    WebService,
+    HttpInterceptorService,
+    SchedulerService
+  ],
 })
 export class TechnicianModule {
 
