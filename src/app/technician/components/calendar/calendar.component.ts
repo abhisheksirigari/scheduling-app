@@ -41,7 +41,8 @@ const colors: any = {
 @Component({
   selector: 'cupcake-calendar',
   templateUrl: './calendar.component.html',
-  styleUrls: ['./calendar.component.scss']
+  styleUrls: ['./calendar.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CalendarComponent {
     @ViewChild(ContextMenuComponent) public contextMenu: ContextMenuComponent;

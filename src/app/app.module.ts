@@ -4,7 +4,6 @@ import { NgModule } from '@angular/core';
 import { CalendarModule } from 'angular-calendar';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 
-import { SharedModule } from './shared/shared.module';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
@@ -17,7 +16,6 @@ import { AppComponent } from './app.component';
     BrowserModule,
     BrowserAnimationsModule,
     CalendarModule.forRoot(),
-    SharedModule,
     AppRoutingModule,
     BsDropdownModule.forRoot()
   ],

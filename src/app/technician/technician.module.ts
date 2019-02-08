@@ -6,7 +6,6 @@ import { CalendarUtilsModule } from '../technician/components/calendar-utils/mod
 import { ContextMenuModule } from 'ngx-contextmenu';
 
 import { TechnicianRoutingModule } from './technician.routing';
-import { SharedModule } from '../shared/shared.module';
 
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { TechHeaderComponent } from './components/tech-header/tech-header.component';
@@ -17,7 +16,6 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 @NgModule({
   imports: [
     CommonModule,
-    SharedModule,
     TechnicianRoutingModule,
     CalendarModule.forRoot(),
     ContextMenuModule.forRoot({useBootstrap4: true}),
